@@ -8,6 +8,7 @@ import MovieList from './MovieList'
 function Movies() {
 
     const {data , error , isFetching} = useGetMoviesQuery()
+    console.log(data);
     
         
   return (

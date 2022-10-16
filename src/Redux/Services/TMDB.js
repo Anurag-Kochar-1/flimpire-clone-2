@@ -20,8 +20,16 @@ export const tmdbApi = createApi({
             query : () => {
                 return `trending/movie/day?api_key=${tmdbApiKey}`
             }
-        })
+        }),
+
+        getMovieDetails : builder.query({
+            query : (id) => {
+                return `movie/${id}?api_key=${tmdbApiKey}`
+            }
+        }),
+
+
     })
 })
 
-export const { useGetMoviesQuery , useGetTrendingMoviesQuery } = tmdbApi
+export const { useGetMoviesQuery , useGetTrendingMoviesQuery , useGetMovieDetailsQuery } = tmdbApi

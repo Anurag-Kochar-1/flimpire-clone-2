@@ -5,27 +5,25 @@ import { RiMickeyLine } from "react-icons/ri"
 import { BiLaugh } from "react-icons/bi"
 
 export const Categories = [
-    {name: "Popular", icon: <BsGraphUp /> },
-    {name: "Top Rated", icon: <BsFillStarFill /> },
-    {name: "Upcoming", icon: <GiPopcorn /> }
+    {name: "Popular", icon: <BsGraphUp /> , id: 1 },
+    {name: "Top Rated", icon: <BsFillStarFill />  , id: 2},
+    {name: "Upcoming", icon: <GiPopcorn /> , id: 3 }
 ]
 
 export const genres = [
-    {name: "Action", icon: <GiBoxingGlove />  },
-    {name: "Adventure", icon: <FaRegCompass />  },
-    {name: "Animation", icon: <RiMickeyLine />  },
-    {name: "Comedy", icon: <BiLaugh />  },
-    {name: "Crime", icon: <BiLaugh />  },
-    {name: "Documentary", icon: <BiLaugh />  },
-    {name: "Drama", icon: <BiLaugh />  },
-    {name: "Family", icon: <BiLaugh />  },
-    {name: "Fantasy", icon: <BiLaugh />  },
-    {name: "History", icon: <BiLaugh />  },
-    {name: "Music", icon: <BiLaugh />  },
-    {name: "Mystery", icon: <BiLaugh />  },
-    {name: "Romance", icon: <BiLaugh />  },
-    
-   
-    
-    
+    {name: "Action", icon: <GiBoxingGlove /> , id: 1},
+    {name: "Adventure", icon: <FaRegCompass /> , id: 2},
+    {name: "Animation", icon: <RiMickeyLine /> , id: 3},
+    {name: "Comedy", icon: <BiLaugh /> , id: 4},
+    {name: "Crime", icon: <BiLaugh /> , id: 5},
+    {name: "Documentary", icon: <BiLaugh /> , id: 6},
+    {name: "Drama", icon: <BiLaugh /> , id: 7},
+    {name: "Family", icon: <BiLaugh /> , id: 8},
+    {name: "Fantasy", icon: <BiLaugh /> , id: 9},
+    {name: "History", icon: <BiLaugh /> , id: 10},
+    {name: "Music", icon: <BiLaugh /> , id: 11},
+    {name: "Mystery", icon: <BiLaugh /> , id: 12},
+    {name: "Romance", icon: <BiLaugh /> , id: 13},
 ]
+
+

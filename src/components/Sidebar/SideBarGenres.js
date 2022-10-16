@@ -1,5 +1,5 @@
 import React from 'react'
-import {genres } from "../../utils/constants"
+import {genres } from "../../utils/Constants"
 
 
 function SideBarGenres() {
@@ -8,10 +8,10 @@ function SideBarGenres() {
         <p className='text-[#ACACAC] text-sm py-2'> Genres </p>
         {genres.map((genre) => {
             return (
-            <div className='text-[#ACACAC]  flex flex-row justify-start items-center'>
+            <div className='text-[#ACACAC]  flex flex-row justify-start items-center' key={genre.id}>
 
                 {genre.icon}
-                <p className='text-[#ACACAC] ml-3 py-1 hover:text-white hover:cursor-pointer'>{genre.name}</p>
+                <p className='text-[#ACACAC] ml-3 py-2 hover:text-white hover:cursor-pointer'>{genre.name}</p>
 
             </div>
             )

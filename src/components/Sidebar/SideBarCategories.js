@@ -1,5 +1,5 @@
 import React from 'react'
-import {Categories } from "../../utils/constants"
+import {Categories } from "../../utils/Constants"
 
 function SideBarCategories() {
   return (
@@ -9,11 +9,11 @@ function SideBarCategories() {
 
       {Categories.map((category) => {
         return (
-          <div className='text-[#ACACAC] flex flex-row justify-start items-center'>
+          <div className='text-[#ACACAC] flex flex-row justify-start items-center' key={category.id}>
 
             {category.icon}
 
-            <p className='text-[#ACACAC] ml-3 py-1 hover:text-white hover:cursor-pointer'>{category.name}</p>
+            <p className='text-[#ACACAC] ml-3 py-2 hover:text-white hover:cursor-pointer'>{category.name}</p>
 
           </div>
         )

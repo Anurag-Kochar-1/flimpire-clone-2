@@ -8,7 +8,7 @@ function MovieList( {movies} ) {
         {/* <button onClick={() => console.log(movies)} > LOG MOVIES PROPS </button> */}
 
         {movies?.results && movies?.results.map((movie) => {
-            return <MovieCard movie={movie} />
+            return <MovieCard key={movie.id} movie={movie} />
         })}
     </div>
   )
