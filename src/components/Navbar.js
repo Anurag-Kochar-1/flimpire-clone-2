@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <div className='bg-[#272727] fixed top-0  z-50  w-full h-[10vh] px-3 flex flex-row justify-between items-center
 
-    lg:bg-red-900  lg:w-[80%]
+    lg:bg-[#272727]  lg:w-[80%]
     
     
     '>
