@@ -28,8 +28,26 @@ export const tmdbApi = createApi({
             }
         }),
 
+        getMovieCredits : builder.query({
+            query : (id) => {
+                return `movie/${id}/credits?api_key=${tmdbApiKey}`
+            }
+        }),
+
+        getMovieRecommendationsForMovie: builder.query({
+            query: (id) => {
+                return `movie/${id}/recommendations?api_key=${tmdbApiKey}`
+            }
+         })
+
 
     })
 })
 
-export const { useGetMoviesQuery , useGetTrendingMoviesQuery , useGetMovieDetailsQuery } = tmdbApi
+export const { useGetMoviesQuery , 
+    useGetTrendingMoviesQuery , 
+    useGetMovieDetailsQuery , 
+    useGetMovieCreditsQuery ,
+    useGetMovieRecommendationsForMovieQuery
+
+} = tmdbApi

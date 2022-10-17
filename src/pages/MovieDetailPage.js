@@ -2,28 +2,51 @@ import React from 'react'
 import { Link , useParams } from "react-router-dom"
 import { useGetMovieDetailsQuery  } from "../Redux/Services/TMDB"
 
+import MoviePoster from '../components/MovieDetailsPage/MoviePoster'; 
+import MovieTitle from '../components/MovieDetailsPage/MovieTitle';
+import MovieTagline from '../components/MovieDetailsPage/MovieTagline';
+import MovieGenre from '../components/MovieDetailsPage/MovieGenre';
+import MovieOverview from '../components/MovieDetailsPage/MovieOverview';
+import MovieCast from '../components/MovieDetailsPage/MovieCast';
+
+import MovieRecommendationsForMovie from '../components/MovieRecommendationsForMovie';
+
 
 function MovieDetailPage() {
 
   const { id } = useParams();
   const {data} = useGetMovieDetailsQuery(id)
 
-  
 
   return (
     <div className='
-    w-screen min-h-screen flex flex-col justify-center items-center px-2 py-20
-    lg:w-[75%] 
+    w-[100%] min-h-full flex flex-col justify-center items-center px-2  pt-[11vh]
+     lg:flex lg:flex-col lg:justify-center lg:items-start  lg:px-0
     '>
+    
+              <div className='lg:flex lg:flex-row lg:justify-center lg:items-start  lg:px-0 '>
 
-      <div className=''>
-        {data && <img src={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`} className="" />}
+                <div className='w-screen px-2 py-10 flex flex-row justify-center items-center
+                lg:w-[30%] lg:h-screen lg:flex-col lg:justify-start lg:items-center
+                '>
+                  <MoviePoster data={data} />
+                </div>
 
-        <div>
-          <h3 className='text-white'> {data?.title}  </h3> 
-        </div>
-      </div>
-      
+                <div className=' w-screen h-auto py-3 text-center flex flex-col justify-center items-center
+                lg:w-[80%] lg:h-auto lg:flex-col lg:items-center lg:justify-center 
+                '>
+                      <MovieTitle data={data}/>
+                      <MovieTagline data={data}/>
+                      <MovieGenre data={data}/>
+                      <MovieOverview data={data}/>
+                      <MovieCast id={id}/>
+                </div>
+              </div>
+         
+
+          <div className=''>
+            <MovieRecommendationsForMovie id={id} />
+          </div>
         
       
     </div>
