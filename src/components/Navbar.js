@@ -3,11 +3,13 @@ import SearchBar from './SearchBar'
 import { BsSun } from "react-icons/bs"
 import { GiHamburgerMenu } from "react-icons/gi"
 
+// lg:bg-[#272727] 
+
 function Navbar() {
   return (
-    <div className='bg-[#272727] fixed top-0  z-50  w-full h-[10vh] px-3 flex flex-row justify-between items-center
-
-    lg:bg-[#272727]  lg:w-[80%]
+    <div className='bg-[#272727]  fixed top-0  z-50  w-full h-[10vh] px-3 flex flex-row justify-between items-center
+    lg:bg-[#272727] lg:w-[80%] lg:px-10
+     
     
     
     '>

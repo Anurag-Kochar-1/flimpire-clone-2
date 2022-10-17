@@ -24,10 +24,10 @@ function MovieDetailPage() {
      lg:flex lg:flex-col lg:justify-center lg:items-start  lg:px-0
     '>
     
-              <div className='lg:flex lg:flex-row lg:justify-center lg:items-start  lg:px-0 '>
+              <div className=' lg:flex lg:flex-row lg:justify-center lg:items-start  lg:px-0 '>
 
                 <div className='w-screen px-2 py-10 flex flex-row justify-center items-center
-                lg:w-[30%] lg:h-screen lg:flex-col lg:justify-start lg:items-center
+                lg:w-[30%] lg:h-auto lg:flex-col lg:justify-start lg:items-center 
                 '>
                   <MoviePoster data={data} />
                 </div>
@@ -39,12 +39,15 @@ function MovieDetailPage() {
                       <MovieTagline data={data}/>
                       <MovieGenre data={data}/>
                       <MovieOverview data={data}/>
-                      <MovieCast id={id}/>
+                      {/* <MovieCast id={id}/> */}
                 </div>
               </div>
          
+          <div className=' w-[100%] h-auto flex flex-row justify-center  py-5'>
+            <MovieCast id={id}/>
+          </div>
 
-          <div className=''>
+          <div >
             <MovieRecommendationsForMovie id={id} />
           </div>
         

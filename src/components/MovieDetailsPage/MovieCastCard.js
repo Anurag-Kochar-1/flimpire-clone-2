@@ -11,8 +11,8 @@ function MovieCastCard( {actor} ) {
             className="w-full rounded-lg pb-2 object-contain"
             /> : <img src={`https://pwco.com.sg/wp-content/uploads/2020/05/Generic-Profile-Placeholder-v3-1536x1536.png`} alt="place-holder" className="w-full rounded-lg pb-2" />}
 
-            <p className='text-gray-100 text-base font-medium mb-1 px-2'>{actor.name}</p>
-            <p className='text-gray-200 text-sm font-medium px-2'>{actor.character}</p> 
+            <p className='text-gray-100 text-lg font-medium mb-1 px-2'>{actor.name}</p>
+            <p className='text-gray-400 text-sm font-medium px-2'>{actor.character}</p> 
 
         </a>
     </div>

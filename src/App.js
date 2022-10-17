@@ -3,8 +3,10 @@ import "./utils/utils.css"
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import MovieDetailPage from './pages/MovieDetailPage';
+import SearchFeed from './pages/SearchFeed';
 import SideBar from './components/Sidebar/SideBar';
 import { Routes , Route , Link } from "react-router-dom"
+
 
 
 // xl:w-[80%] xl:ml-[20%] xl:bg-blue-900
@@ -29,6 +31,7 @@ function App() {
           <Routes>
             <Route path='/' exact element={<HomePage />} />
             <Route path='/movie/:id' exact element={<MovieDetailPage />} />
+            <Route path='/search/:moviequery' exact element={<SearchFeed />} />
           </Routes>
       </div>
 

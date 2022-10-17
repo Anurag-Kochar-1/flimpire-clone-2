@@ -38,6 +38,12 @@ export const tmdbApi = createApi({
             query: (id) => {
                 return `movie/${id}/recommendations?api_key=${tmdbApiKey}`
             }
+         }),
+
+         getSearchMovie: builder.query({
+            query : (search_query) => {
+                return search_query ? `search/movie?api_key=${tmdbApiKey}&query=${search_query}` : false
+            }
          })
 
 
@@ -48,6 +54,7 @@ export const { useGetMoviesQuery ,
     useGetTrendingMoviesQuery , 
     useGetMovieDetailsQuery , 
     useGetMovieCreditsQuery ,
-    useGetMovieRecommendationsForMovieQuery
+    useGetMovieRecommendationsForMovieQuery,
+    useGetSearchMovieQuery
 
 } = tmdbApi

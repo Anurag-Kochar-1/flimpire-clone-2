@@ -7,12 +7,11 @@ import MovieCastCard from './MovieCastCard';
 function MovieCast( {id} ) {
     const { data } = useGetMovieCreditsQuery(id)
 
-    console.log(data);
+    // console.log(data);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col justify-center items-center flex-wrap  
-    lg:w-[95%]  lg:py-3 lg:justify-start lg:overflow-hidden
-    
+    <div className="w-screen h-auto flex flex-col justify-center items-center flex-wrap py-5 
+    lg:w-[95%]  lg:py-5 lg:justify-start lg:overflow-hidden 
     ">
 
         <h3 className='font-semibold text-3xl text-white pb-5'>Top Cast </h3>
