@@ -5,9 +5,9 @@ import { RiMickeyLine } from "react-icons/ri"
 import { BiLaugh } from "react-icons/bi"
 
 export const Categories = [
-    {name: "Popular", icon: <BsGraphUp /> , id: 1 },
-    {name: "Top Rated", icon: <BsFillStarFill />  , id: 2},
-    {name: "Upcoming", icon: <GiPopcorn /> , id: 3 }
+    {name: "popular", icon: <BsGraphUp /> , id: 1 },
+    {name: "top_rated", icon: <BsFillStarFill />  , id: 2},
+    {name: "upcoming", icon: <GiPopcorn /> , id: 3 }
 ]
 
 export const genres = [

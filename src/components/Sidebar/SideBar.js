@@ -6,6 +6,9 @@ import SideBarCategories from './SideBarCategories'
 import SideBarGenres from './SideBarGenres'
 
 function SideBar() {
+  
+  
+
   return (
  
     <div className='hidden hiding-scrollbar addedSidebarClass 
@@ -20,7 +23,7 @@ function SideBar() {
         <SidebarLogoBranding />
         <SideBarCategories />
         <SideBarGenres />
-        
+        {/* <button className='bg-white p-5' onClick={() => console.log(data)} > LOG CONTEXT DATA </button> */}
 
         
     

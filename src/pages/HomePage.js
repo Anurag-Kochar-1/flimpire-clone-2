@@ -17,7 +17,6 @@ function HomePage() {
         <TrendingBanner />
         <Movies />
 
-    
 
         </div>
 
