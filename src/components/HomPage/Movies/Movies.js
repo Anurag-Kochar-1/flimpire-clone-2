@@ -6,6 +6,7 @@ import MovieList from './MovieList'
 
 
 function Movies() {
+  // console.log('movies.js components being called');
 
     const {data , error , isFetching} = useGetMoviesQuery()
     // console.log(data);

@@ -19,8 +19,8 @@ function MovieCast( {id} ) {
         <div className='w-[100%] flex flex-row flex-wrap justify-center 
             lg:w-[100%] 
         '>
-            {data?.cast &&   data?.cast.slice(0,6).map((actor) => {
-                return <MovieCastCard actor={actor} />
+            {data?.cast &&   data?.cast.slice(0,6).map((actor, index) => {
+                return <MovieCastCard key={index} actor={actor} />
             
             })}
         </div>
