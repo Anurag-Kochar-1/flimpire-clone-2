@@ -47,7 +47,7 @@ function MovieDetailPage() {
                       <MovieTitle data={data}/>
                       <MovieTagline data={data}/>
 
-                      <div className='bg-gray-800 rounded-lg px-4 py-2 flex flex-row justify-center items-center'>
+                      <div className='bg-gray-800 rounded-lg px-3 py-2 my-3 flex flex-row justify-center items-center'>
                           <Rating className=''  name="half-rating-read"  value={data?.vote_average / 2} precision={0.1} readOnly />
                       </div>
 

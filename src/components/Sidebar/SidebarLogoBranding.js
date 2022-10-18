@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 function SidebarLogoBranding() {
   return (
         <Link to={'/'}>
-          <div className=' w-full py-2 flex flex-row justify-start items-center hover:cursor-pointer'>
-                <img src={logoFire} alt="logoFire" className='w-16 hover:cursor-pointer' />
+          <div className=' w-full py-2 flex flex-row justify-start items-center hover:cursor-pointer '>
+                <img src={logoFire} alt="logoFire" className='w-16 hover:cursor-pointer ' />
                 <h1 className='text-white text-2xl font-bold hover:cursor-pointer'> Litpire </h1>
 
           </div>

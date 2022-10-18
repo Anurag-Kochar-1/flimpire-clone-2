@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../../App.css"
+
 
 function MovieGenre( {data} ) {
   return (
@@ -10,10 +12,11 @@ function MovieGenre( {data} ) {
     '>
         {data?.genres && data?.genres?.map((genre, index) => {
             return (
-                <div key={index} className="w-auto px-5 py-2 mx-1 bg-gray-800 rounded-xl flex flex-row justify-center items-center">
-                    <p className='text-gray-300 font-semibold'> {genre.name} </p>
-                </div>
-
+                
+                  <div key={index} className="w-auto px-5 py-2 mx-1 bg-gray-800 rounded-xl flex flex-row justify-center items-center">
+                      <p className='text-gray-300 font-semibold'> {genre.name} </p>
+                  </div>
+                
                 
             )
         })}

@@ -11,7 +11,7 @@ function MovieCard( {movie} ) {
   console.log(movie);
   return (
 
-    <div className='bg-[#1F1F1F] w-[55%] h-auto mx-2 my-5 pb-3 rounded-md flex flex-col justify-center items-center
+    <div className='bg-[#1F1F1F] w-[55%] h-auto mx-2 my-5 pb-3 rounded-md flex flex-col justify-center items-center hover:scale-110 transition duration-300 ease-in-out
     sm:w-[35%]
     md:w-[25%]
     lg:w-[20%] lg:mx-4 lg:my-4

@@ -22,7 +22,7 @@ function SideBarGenres() {
             return (
            
               <Link to={`movies/${genre.id}/:${genre.name}`} onClick={() => console.log(`genre.id is ${genre.id}`) }>
-                <div className='text-[#ACACAC]  flex flex-row justify-start items-center' key={genre.id} onClick={() => {dispatch(setPageNumberByRedux(1))}}  >
+                <div className='text-[#ACACAC]  flex flex-row justify-start items-center hover:scale-110 transition duration-300 ease-in-out' key={genre.id} onClick={() => {dispatch(setPageNumberByRedux(1))}}  >
 
           
 
@@ -40,7 +40,8 @@ function SideBarGenres() {
           return (
            
             <Link to={`movies/${tvGenre.id}/:${tvGenre.name}`} onClick={() => console.log(`genre.id is ${tvGenre.id}`) }>
-              <div className='text-[#ACACAC]  flex flex-row justify-start items-center' key={tvGenre.id} onClick={() => {dispatch(setPageNumberByRedux(1))}}  >
+
+              <div className='text-[#ACACAC]  flex flex-row justify-start items-center  hover:scale-110 transition duration-300 ease-in-out' key={tvGenre.id} onClick={() => {dispatch(setPageNumberByRedux(1))}}  >
 
         
 

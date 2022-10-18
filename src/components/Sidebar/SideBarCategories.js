@@ -13,14 +13,14 @@ function SideBarCategories() {
   // console.log(`asdasdasd ${category}`);
 
   return (
-    <div className=' py-3'>
+    <div className=' py-3 '>
 
       <p className='text-[#ACACAC] text-sm py-2'> Categories </p>
 
       {Categories.map((category) => {
         return (
           <Link to={`home/${category.name}`} >
-            <div className='text-[#ACACAC] flex flex-row justify-start items-center' key={category.id} onClick={() => {
+            <div className='text-[#ACACAC] flex flex-row justify-start items-center hover:scale-110 transition duration-300 ease-in-out ' key={category.id} onClick={() => {
               dispatch(setPageNumberByRedux(1))
               
             }} >
