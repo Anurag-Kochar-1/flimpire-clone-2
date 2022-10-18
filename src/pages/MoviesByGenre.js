@@ -2,14 +2,17 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router'
 import MovieList from '../components/HomPage/Movies/MovieList'
 import { useGetMoviesByGenreQuery } from "../Redux/Services/TMDB"
-
 import axios from "axios"
+import Pagination from '../components/Pagination'
+import { useSelector } from 'react-redux'
 
 
 
 
 
 function MoviesByGenre() {
+
+  const pageNumberByRedux = useSelector((state) => state.pageNumberSlice.value)
 
   const {genreid} = useParams() 
   const [genreMovieApiData, setGenreMovieApiData] = useState([]);
@@ -28,12 +31,12 @@ function MoviesByGenre() {
   };
 
   useEffect(() => {
-    axios.request(options).then(function (response) {
-      // console.log(response.data);
-      setGenreMovieApiData(response.data)
-    }).catch(function (error) {
-      console.error(error);
-    });
+    // axios.request(options).then(function (response) {
+    //   console.log(response.data);
+    //   setGenreMovieApiData(response.data)
+    // }).catch(function (error) {
+    //   console.error(error);
+    // });
   },[genreid])
 
   useEffect(() => {
@@ -42,7 +45,7 @@ function MoviesByGenre() {
   
     
 
-    const {data ,error} = useGetMoviesByGenreQuery(genreIDState)
+    const {data ,error} = useGetMoviesByGenreQuery({genreIDState, pageNumberByRedux})
     console.log(data)
     console.log('data is printed');
 
@@ -56,7 +59,10 @@ function MoviesByGenre() {
     
     {/* {error && <h1 className='text-white text-4xl'> FAILED API REQUEST </h1>} */}
     {/* {!error &&  <MovieList movies={data} />} */}
-    <h1 className='text-white text-3xl'> {genreid} </h1>
+
+    <Pagination />
+
+    <h1 className='text-white text-3xl'> {genreid} : Redux : {pageNumberByRedux} </h1>
     {/* <MovieList movies={genreMovieApiData} /> */}
     <MovieList movies={data} />
     

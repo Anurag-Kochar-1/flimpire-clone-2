@@ -5,7 +5,7 @@ const tmdbApiKey = process.env.REACT_APP_TMDB_API_KEY
 // https://api.themoviedb.org/3/trending/all/day?api_key=<<api_key>>
 
 // const pageNumber = 41
-
+// const pageNumberByRedux = 1
 
 export const tmdbApi = createApi({
     reducerPath : "tmdbApi",
@@ -13,8 +13,8 @@ export const tmdbApi = createApi({
     endpoints : (builder) => ({
 
         getMovies: builder.query({
-            query: ({category = 'popular' , pageNumber}) => {
-                return `movie/${category}?page=${pageNumber}&api_key=${tmdbApiKey}`
+            query: ({category = 'popular' , pageNumberByRedux}) => {
+                return `movie/${category}?page=${pageNumberByRedux}&api_key=${tmdbApiKey}`
             }
         }),
 
@@ -49,11 +49,11 @@ export const tmdbApi = createApi({
          }),
 
          getMoviesByGenre : builder.query({
-            query : (genreID) => {
+            query : ({genreIDState, pageNumberByRedux}) => {
                 // return genre && genre.length != 0 ? `discover/movie?api_key=${tmdbApiKey}}&language=en-US&sort_by=release_date.desc&with_genres=${genre}` : 0
 
                 // return `discover/movie?with_genres=${genre}?page=1&api_key=${tmdbApiKey}` 
-                return `/discover/movie?sort_by=popularity.desc&api_key=${tmdbApiKey}&with_genres=${genreID}` 
+                return `/discover/movie?page=${pageNumberByRedux}&sort_by=popularity.desc&api_key=${tmdbApiKey}&with_genres=${genreIDState}` 
             }
          })
 

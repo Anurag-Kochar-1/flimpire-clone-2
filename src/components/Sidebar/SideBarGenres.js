@@ -1,12 +1,14 @@
 import React from 'react'
 import {genres } from "../../utils/Constants"
 import { Link , useParams} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setPageNumberByRedux } from "../../Redux/Slices/PageNumberSlice"
 
-
+// onClick={() => {dispatch(setPageNumberByRedux(1))}}
 
 function SideBarGenres() {
 
-  
+  const dispatch = useDispatch()
   const {genreid} = useParams()
 
  
@@ -18,7 +20,7 @@ function SideBarGenres() {
             return (
            
               <Link to={`movies/${genre.id}`} onClick={() => console.log(`genre.id is ${genre.id}`) }>
-                <div className='text-[#ACACAC]  flex flex-row justify-start items-center' key={genre.id} >
+                <div className='text-[#ACACAC]  flex flex-row justify-start items-center' key={genre.id} onClick={() => {dispatch(setPageNumberByRedux(1))}}  >
 
           
 

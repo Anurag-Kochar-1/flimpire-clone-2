@@ -2,8 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {Categories } from "../../utils/Constants"
 import { useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setPageNumberByRedux } from "../../Redux/Slices/PageNumberSlice"
 
 function SideBarCategories() {
+
+  const dispatch = useDispatch()
   const {category } = useParams()
 
   console.log(`asdasdasd ${category}`);
@@ -16,7 +20,7 @@ function SideBarCategories() {
       {Categories.map((category) => {
         return (
           <Link to={`home/${category.name}`} >
-            <div className='text-[#ACACAC] flex flex-row justify-start items-center' key={category.id} >
+            <div className='text-[#ACACAC] flex flex-row justify-start items-center' key={category.id} onClick={() => dispatch(setPageNumberByRedux(1))  } >
             
 
               {category.icon}
