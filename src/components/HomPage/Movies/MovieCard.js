@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 import placeholderImage from '../../../images/movieORtvImageForEmpty.png'
+import { Rating } from "@mui/material" 
 
 
 function MovieCard( {movie} ) {
@@ -25,6 +26,9 @@ function MovieCard( {movie} ) {
             {movieORtv === 'movie' && <h3 className='text-[#AFB0A9] text-center px-1 text-base font-semibold py-2'>  {movie.title} </h3>}
             {movieORtv === 'tv' && <h3 className='text-[#AFB0A9] text-center px-1 text-base font-semibold py-2'>  {movie.name} </h3>}
 
+            <div className='py-1 flex flex-row justify-center items-center'>
+             <Rating className=''  name="half-rating-read"  value={movie?.vote_average / 2} precision={0.1} readOnly />
+            </div>
         </Link>
 
     </div>

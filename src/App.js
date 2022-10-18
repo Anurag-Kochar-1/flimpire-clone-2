@@ -14,7 +14,6 @@ function App() {
   
 
   return (
-    
 
             <div className="w-screen h-screen 
             lg:flex lg:flex-row lg:justify-center lg:items-center 

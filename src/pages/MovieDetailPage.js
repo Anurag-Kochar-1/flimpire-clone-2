@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link , useParams } from "react-router-dom"
 import { useGetMovieDetailsQuery } from "../Redux/Services/TMDB"
-
+import { Rating } from "@mui/material" 
 
 import MoviePoster from '../components/MovieDetailsPage/MoviePoster'; 
 import MovieTitle from '../components/MovieDetailsPage/MovieTitle';
@@ -13,6 +13,7 @@ import MovieVideoSection from '../components/MovieDetailsPage/MovieVideoSection'
 
 import MovieRecommendationsForMovie from '../components/MovieRecommendationsForMovie';
 import { useSelector } from 'react-redux';
+
 
 
 function MovieDetailPage() {
@@ -29,6 +30,8 @@ function MovieDetailPage() {
     w-[100%] min-h-full flex flex-col justify-center items-center px-2  pt-[11vh]
      lg:flex lg:flex-col lg:justify-center lg:items-start  lg:px-0
     '>
+
+
     
           <div className=' lg:flex lg:flex-row lg:justify-center lg:items-start  lg:px-0 '>
 
@@ -43,10 +46,17 @@ function MovieDetailPage() {
                 '>
                       <MovieTitle data={data}/>
                       <MovieTagline data={data}/>
+
+                      <div className='bg-gray-800 rounded-lg px-4 py-2 flex flex-row justify-center items-center'>
+                          <Rating className=''  name="half-rating-read"  value={data?.vote_average / 2} precision={0.1} readOnly />
+                      </div>
+
                       <MovieGenre data={data}/>
                       <MovieOverview data={data}/>
                       {/* <MovieCast id={id}/> */}
                       <MovieVideoSection id={data?.id} />
+
+                     
                       
                 </div>
           </div>

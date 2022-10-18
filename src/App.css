@@ -85,3 +85,9 @@ html, body {
     align-items: flex-start;
   }
 }
+
+
+.addedForTheme {
+  background-color: white !important; 
+  color: black !important;
+}

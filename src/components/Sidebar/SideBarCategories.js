@@ -10,7 +10,7 @@ function SideBarCategories() {
   const dispatch = useDispatch()
   const {category } = useParams()
 
-  console.log(`asdasdasd ${category}`);
+  // console.log(`asdasdasd ${category}`);
 
   return (
     <div className=' py-3'>
@@ -20,7 +20,10 @@ function SideBarCategories() {
       {Categories.map((category) => {
         return (
           <Link to={`home/${category.name}`} >
-            <div className='text-[#ACACAC] flex flex-row justify-start items-center' key={category.id} onClick={() => dispatch(setPageNumberByRedux(1))  } >
+            <div className='text-[#ACACAC] flex flex-row justify-start items-center' key={category.id} onClick={() => {
+              dispatch(setPageNumberByRedux(1))
+              
+            }} >
             
 
               {category.icon}

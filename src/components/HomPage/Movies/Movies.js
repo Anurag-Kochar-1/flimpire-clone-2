@@ -21,14 +21,13 @@ function Movies() {
     const {category} = useParams()
     const {data , error , isFetching} = useGetMoviesQuery({category , pageNumberByRedux , movieORtv})
     
-    useEffect(() => {
 
-    },[pageNumberByRedux])
-    
+  
         
   return (
     <div className=" w-full h-auto px-1 py-2 flex flex-row justify-center flex-wrap">
 
+        {/* <button className='p-4 bg-red-400' onClick={() => console.log(docTitle) } >  LOG category </button> */}
 
         {!category && <h1 className='text-gray-100 text-3xl py-5 font-semibold'>  Popular {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
         {category === 'popular' && <h1 className='text-gray-100 text-3xl py-5 font-semibold'>  Popular {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
@@ -36,7 +35,6 @@ function Movies() {
         {category === 'upcoming' && <h1 className='text-gray-100 text-3xl py-5 font-semibold'>  Upcoming {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
 
         
-        {/* <button onClick={() => console.log(data?.results) } >  LOG </button> */}
         { isFetching &&  <h1 className='font-bold text-4xl' > FETCHING........ </h1>}
 
         {/* <h1 className='text-purple-300 text-5xl'> movieORtv : {movieORtv} </h1> */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import "../App.css"
 import SearchBar from './SearchBar'
 import { BsSun } from "react-icons/bs"
 import { GiHamburgerMenu } from "react-icons/gi"
