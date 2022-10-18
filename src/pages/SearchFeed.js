@@ -2,10 +2,13 @@ import React from 'react'
 import { useParams } from 'react-router'
 import { useGetSearchMovieQuery } from '../Redux/Services/TMDB'
 import MovieList from '../components/HomPage/Movies/MovieList'
+import { useSelector } from 'react-redux'
 
 function SearchFeed() {
+    const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
+
     const {moviequery} = useParams()
-    const {data} = useGetSearchMovieQuery(moviequery)
+    const {data} = useGetSearchMovieQuery({moviequery , movieORtv})
     console.log(moviequery);
     console.log(data);
 

@@ -2,14 +2,16 @@ import React, {useState, useRef} from 'react'
 import {BsSearch} from "react-icons/bs"
 import { useGetSearchMovieQuery } from "../Redux/Services/TMDB"
 import { Link , useNavigate} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function SearchBar() {
+  const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
 
   const [movieSearchValue, setMovieSearchValue] = useState('')
   const navigate = useNavigate()
   
 
-  const {data} = useGetSearchMovieQuery(movieSearchValue)
+  const {data} = useGetSearchMovieQuery ({movieSearchValue, movieORtv})
   // console.log(data);
   
 

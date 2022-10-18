@@ -1,11 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { useGetMovieVideosQuery } from '../../Redux/Services/TMDB'
 
 // width="560" height="315" w-[560px] h-[315px]
 
 function MovieVideoSection( {id} ) {
-
-    const {data} = useGetMovieVideosQuery(id)
+    const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
+    const {data} = useGetMovieVideosQuery({id , movieORtv})
 
   return (
         <div className='w-full h-auto flex flex-col justify-center items-center p-1 my-3 rounded-lg'>

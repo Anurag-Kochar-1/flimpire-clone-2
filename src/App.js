@@ -29,14 +29,16 @@ function App() {
               xl:w-[80%] xl:ml-[20%] 
               '>
                   <Navbar />
+                  
                   <Routes>
                     <Route path='/' exact element={<HomePage />} />
                     <Route path='/home/:category' exact element={<HomePage />} />
                     <Route path='/movie/:id' exact element={<MovieDetailPage />} />
                     <Route path='/search/:moviequery' exact element={<SearchFeed />} />
-                    <Route path='/movies/:genreid' exact element={<MoviesByGenre />} />
+                    <Route path='/movies/:genreid/:genrename' exact element={<MoviesByGenre />} />
                   </Routes>
               {/* <Pagination /> */}
+              
               </div>
 
 

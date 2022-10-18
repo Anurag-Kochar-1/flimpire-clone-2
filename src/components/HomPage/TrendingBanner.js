@@ -1,13 +1,16 @@
 import React , {useEffect, useState} from 'react'
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 import { useGetTrendingMoviesQuery } from "../../Redux/Services/TMDB"
 
 
 
 function TrendingBanner() {
+    const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
+
     console.log('TrendingBanner is CALLED');
     const randomID = Math.floor(Math.random() * (18 - 1)) + 1;
-    const {data} = useGetTrendingMoviesQuery()
+    const {data} = useGetTrendingMoviesQuery(movieORtv)
 
     const [ trendingMovieID, setTrendingMovieID ] = useState(0)
     

@@ -1,11 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { useGetMovieCreditsQuery } from "../../Redux/Services/TMDB"
 import MovieCastCard from './MovieCastCard';
 
 // overflow-x-scroll overflow-y-hidden
 
 function MovieCast( {id} ) {
-    const { data } = useGetMovieCreditsQuery(id)
+    const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
+    const { data } = useGetMovieCreditsQuery({id, movieORtv})
 
     // console.log(data);
 

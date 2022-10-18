@@ -1,10 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { useGetMovieRecommendationsForMovieQuery } from "../Redux/Services/TMDB"
 import MovieList from './HomPage/Movies/MovieList';
 
 function MovieRecommendationsForMovie( {id} ) {
+    const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
 
-    const {data} = useGetMovieRecommendationsForMovieQuery(id)
+    const {data} = useGetMovieRecommendationsForMovieQuery({id, movieORtv})
     console.log(data);
     console.log(23123);
 

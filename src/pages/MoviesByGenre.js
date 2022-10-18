@@ -11,10 +11,12 @@ import { useSelector } from 'react-redux'
 
 
 function MoviesByGenre() {
+  const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
 
   const pageNumberByRedux = useSelector((state) => state.pageNumberSlice.value)
 
-  const {genreid} = useParams() 
+  const {genreid , genrename} = useParams() 
+  const genreNameHeading = genrename.substring(1)
   const [genreMovieApiData, setGenreMovieApiData] = useState([]);
 
   const [genreIDState, setGenreIDState] = useState(0)
@@ -45,7 +47,7 @@ function MoviesByGenre() {
   
     
 
-    const {data ,error} = useGetMoviesByGenreQuery({genreIDState, pageNumberByRedux})
+    const {data ,error} = useGetMoviesByGenreQuery({genreIDState, pageNumberByRedux, movieORtv})
     // console.log(data)
     // console.log('data is printed');
 
@@ -59,6 +61,7 @@ function MoviesByGenre() {
     
     {/* {error && <h1 className='text-white text-4xl'> FAILED API REQUEST </h1>} */}
     {/* {!error &&  <MovieList movies={data} />} */}
+    <h1 className='text-white text-4xl'> {genreNameHeading}</h1>
     <MovieList movies={data} />
 
     <Pagination />

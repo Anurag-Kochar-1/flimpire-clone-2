@@ -12,12 +12,14 @@ import MovieCast from '../components/MovieDetailsPage/MovieCast';
 import MovieVideoSection from '../components/MovieDetailsPage/MovieVideoSection';
 
 import MovieRecommendationsForMovie from '../components/MovieRecommendationsForMovie';
+import { useSelector } from 'react-redux';
 
 
 function MovieDetailPage() {
+  const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
 
   const { id } = useParams();
-  const {data} = useGetMovieDetailsQuery(id)
+  const {data} = useGetMovieDetailsQuery({id, movieORtv})
   console.log(data);
   console.log('loggin data from MovieDetailsPage.js');
 
