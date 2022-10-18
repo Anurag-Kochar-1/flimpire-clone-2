@@ -25,8 +25,9 @@ function Pagination( {currentPage , setPageNumber , totalNumberOfPages} ) {
     if(totalNumberOfPages === 0) return null
 
   return (
-    <div className='bg-red-300 w-full h-20 flex justify-center items-center'>
-        <button className='p-3 bg-green-200' onClick={() => {
+    <div className='  w-full h-20 px-4 py-5 mt-4 flex justify-center items-center shadow-2xl '>
+
+        <button className='px-4 py-2 rounded-xl bg-black text-white font-medium hover:shadow-sm hover:shadow-slate-100' onClick={() => {
             if(pageNumberByRedux !== 1) {
                 dispatch(prevPage(1))
                 console.log('dispatch prevPage is called');
@@ -38,9 +39,9 @@ function Pagination( {currentPage , setPageNumber , totalNumberOfPages} ) {
        
 
         {/* <h1 className='text-black text-xl px-4'> Page number : {currentPage} </h1> */}
-        <h1 className='text-gray-600 text-3xl px-4'> Page number by redux : {pageNumberByRedux} </h1>
+        <h1 className='text-gray-200 text-lg font-bold px-5'> {pageNumberByRedux} </h1>
 
-        <button className='p-3 bg-blue-200' onClick={() => {
+        <button className='px-4 py-2 rounded-xl bg-black text-white font-medium hover:shadow-sm hover:shadow-slate-100' onClick={() => {
             if( pageNumberByRedux !== totalNumberOfPages ) {
                 dispatch(nextPage(1))
                 console.log('dispatch nexPage is called');

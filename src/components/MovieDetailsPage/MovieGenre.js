@@ -10,7 +10,7 @@ function MovieGenre( {data} ) {
     '>
         {data?.genres && data?.genres?.map((genre, index) => {
             return (
-                <div key={index} className="w-12 px-10 py-2 mx-1 bg-gray-800 rounded-xl flex flex-row justify-center items-center">
+                <div key={index} className="w-auto px-5 py-2 mx-1 bg-gray-800 rounded-xl flex flex-row justify-center items-center">
                     <p className='text-gray-300 font-semibold'> {genre.name} </p>
                 </div>
 

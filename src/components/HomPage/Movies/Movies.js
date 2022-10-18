@@ -29,13 +29,13 @@ function Movies() {
         {/* <button onClick={() => console.log(data?.results) } >  LOG </button> */}
         { isFetching &&  <h1 className='font-bold text-4xl' > FETCHING........ </h1>}
 
+        <MovieList movies = {data} />
 
-        <h1 className='text-purple-300 text-5xl'> pageNumberByRedux : {pageNumberByRedux} </h1>
-        <button className='p-3 bg-green-100' onClick={() => console.log(pageNumberByRedux)}> LOG pageNumberByRedux </button>
+        {/* <h1 className='text-purple-300 text-5xl'> pageNumberByRedux : {pageNumberByRedux} </h1> */}
+        {/* <button className='p-3 bg-green-100' onClick={() => console.log(pageNumberByRedux)}> LOG pageNumberByRedux </button> */}
         <Pagination currentPage={pageNumber} setPageNumber={setPageNumber} totalNumberOfPages={data?.total_pages} />
 
         
-        <MovieList movies = {data} />
     </div>
   )
 }

@@ -59,14 +59,13 @@ function MoviesByGenre() {
     
     {/* {error && <h1 className='text-white text-4xl'> FAILED API REQUEST </h1>} */}
     {/* {!error &&  <MovieList movies={data} />} */}
+    <MovieList movies={data} />
 
     <Pagination />
 
-    <h1 className='text-white text-3xl'> {genreid} : Redux : {pageNumberByRedux} </h1>
+    {/* <h1 className='text-white text-3xl'> {genreid} : Redux : {pageNumberByRedux} </h1> */}
     {/* <MovieList movies={genreMovieApiData} /> */}
-    <MovieList movies={data} />
-    
-    <button className='bg-red-500 p-24' onClick={() => console.log(genreMovieApiData) }> LOG setGenreMovieApiData </button>
+    {/* <button className='bg-red-500 p-24' onClick={() => console.log(genreMovieApiData) }> LOG setGenreMovieApiData </button> */}
     </div>
   )
 }
