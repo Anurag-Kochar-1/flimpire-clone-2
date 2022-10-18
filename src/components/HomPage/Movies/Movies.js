@@ -30,10 +30,10 @@ function Movies() {
     <div className=" w-full h-auto px-1 py-2 flex flex-row justify-center flex-wrap">
 
 
-        {!category && <h1 className='text-red-900 text-4xl'>  Popular {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
-        {category === 'popular' && <h1 className='text-red-900 text-4xl'>  Popular {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
-        {category === 'top_rated' && <h1 className='text-blue-900 text-4xl'>  Top Rated {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
-        {category === 'upcoming' && <h1 className='text-pink-900 text-4xl'>  Upcoming {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
+        {!category && <h1 className='text-gray-100 text-3xl py-5 font-semibold'>  Popular {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
+        {category === 'popular' && <h1 className='text-gray-100 text-3xl py-5 font-semibold'>  Popular {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
+        {category === 'top_rated' && <h1 className='text-gray-100 text-3xl py-5 font-semibold'>  Top Rated {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
+        {category === 'upcoming' && <h1 className='text-gray-100 text-3xl py-5 font-semibold'>  Upcoming {movieORtv === 'movie' ? "Movies" : "TV Shows"} </h1>}
 
         
         {/* <button onClick={() => console.log(data?.results) } >  LOG </button> */}
