@@ -11,10 +11,10 @@ import axios from "axios"
 
 function MoviesByGenre() {
 
-  const {genre} = useParams() 
+  const {genreid} = useParams() 
   const [genreMovieApiData, setGenreMovieApiData] = useState([]);
 
-  const [genreState, setGenreState] = useState('')
+  const [genreIDState, setGenreIDState] = useState(0)
 
   const options = {
     method: 'GET',
@@ -23,7 +23,7 @@ function MoviesByGenre() {
       api_key: '0b41029c719b5161130e5c826d39d2fa',
       sort_by: 'popularity%2Edesc',
       page: '1',
-      with_genres: `${genre}`
+      with_genres: `${genreid}`
     }
   };
 
@@ -34,17 +34,17 @@ function MoviesByGenre() {
     }).catch(function (error) {
       console.error(error);
     });
-  },[genre])
+  },[genreid])
 
   useEffect(() => {
-    setGenreState(genre)
-  },[])
+    setGenreIDState(genreid)
+  },[genreid])
   
     
 
-    const {data ,error} = useGetMoviesByGenreQuery(genreState)
+    const {data ,error} = useGetMoviesByGenreQuery(genreIDState)
     console.log(data)
-    console.log(0);
+    console.log('data is printed');
 
     
 
@@ -56,9 +56,9 @@ function MoviesByGenre() {
     
     {/* {error && <h1 className='text-white text-4xl'> FAILED API REQUEST </h1>} */}
     {/* {!error &&  <MovieList movies={data} />} */}
-    <h1 className='text-white text-3xl'> {genre} </h1>
-    <MovieList movies={genreMovieApiData} />
-    {/* <MovieList movies={data} /> */}
+    <h1 className='text-white text-3xl'> {genreid} </h1>
+    {/* <MovieList movies={genreMovieApiData} /> */}
+    <MovieList movies={data} />
     
     <button className='bg-red-500 p-24' onClick={() => console.log(genreMovieApiData) }> LOG setGenreMovieApiData </button>
     </div>

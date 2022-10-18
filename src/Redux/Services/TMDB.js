@@ -51,10 +51,11 @@ export const tmdbApi = createApi({
          }),
 
          getMoviesByGenre : builder.query({
-            query : (genre) => {
+            query : (genreID) => {
                 // return genre && genre.length != 0 ? `discover/movie?api_key=${tmdbApiKey}}&language=en-US&sort_by=release_date.desc&with_genres=${genre}` : 0
 
-                return `discover/movie?with_genres=${genre}?page=1&api_key=${tmdbApiKey}` 
+                // return `discover/movie?with_genres=${genre}?page=1&api_key=${tmdbApiKey}` 
+                return `/discover/movie?sort_by=popularity.desc&api_key=${tmdbApiKey}&with_genres=${genreID}` 
             }
          })
 
