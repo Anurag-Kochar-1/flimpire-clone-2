@@ -11,19 +11,26 @@ export const Categories = [
 ]
 
 export const genres = [
-    {name: "Action", icon: <GiBoxingGlove /> , id: 1},
-    {name: "Adventure", icon: <FaRegCompass /> , id: 2},
-    {name: "Animation", icon: <RiMickeyLine /> , id: 3},
-    {name: "Comedy", icon: <BiLaugh /> , id: 4},
-    {name: "Crime", icon: <BiLaugh /> , id: 5},
-    {name: "Documentary", icon: <BiLaugh /> , id: 6},
-    {name: "Drama", icon: <BiLaugh /> , id: 7},
-    {name: "Family", icon: <BiLaugh /> , id: 8},
-    {name: "Fantasy", icon: <BiLaugh /> , id: 9},
-    {name: "History", icon: <BiLaugh /> , id: 10},
-    {name: "Music", icon: <BiLaugh /> , id: 11},
-    {name: "Mystery", icon: <BiLaugh /> , id: 12},
-    {name: "Romance", icon: <BiLaugh /> , id: 13},
+    {name: "Action", icon: <GiBoxingGlove /> , id: 28},
+    {name: "Adventure", icon: <FaRegCompass /> , id: 12},
+    {name: "Animation", icon: <RiMickeyLine /> , id: 16},
+    {name: "Comedy", icon: <BiLaugh /> , id: 35},
+    {name: "Crime", icon: <BiLaugh /> , id: 80},
+    {name: "Documentary", icon: <BiLaugh /> , id: 99},
+    {name: "Drama", icon: <BiLaugh /> , id: 18},
+    {name: "Family", icon: <BiLaugh /> , id: 10751},
+    {name: "Fantasy", icon: <BiLaugh /> , id: 14},
+    {name: "History", icon: <BiLaugh /> , id: 36},
+    {name: "Horror", icon: <BiLaugh /> , id: 27},
+    {name: "Music", icon: <BiLaugh /> , id: 10402},
+    {name: "Mystery", icon: <BiLaugh /> , id: 9648},
+    {name: "Romance", icon: <BiLaugh /> , id: 10749},
+    {name: "Science Fiction", icon: <BiLaugh /> , id: 878},
+    {name: "TV Movie", icon: <BiLaugh /> , id: 10770},
+    {name: "Thriller", icon: <BiLaugh /> , id: 53},
+    {name: "War", icon: <BiLaugh /> , id: 10752},
+    {name: "Western", icon: <BiLaugh /> , id: 37},
 ]
+
 
 
