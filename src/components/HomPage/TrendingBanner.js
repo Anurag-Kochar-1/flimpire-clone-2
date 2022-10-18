@@ -5,12 +5,21 @@ import { useGetTrendingMoviesQuery } from "../../Redux/Services/TMDB"
 
 
 function TrendingBanner() {
+    console.log('TrendingBanner is CALLED');
+    const randomID = Math.floor(Math.random() * (18 - 1)) + 1;
     const {data} = useGetTrendingMoviesQuery()
 
     const [ trendingMovieID, setTrendingMovieID ] = useState(0)
     
-   
-
+    
+    useEffect(() => {
+        setTrendingMovieID(randomID)
+        console.log(`random id is : ${randomID}`);
+    },[])
+    
+        
+    
+    
 
     
 
@@ -34,11 +43,12 @@ function TrendingBanner() {
             <p className='text-gray-300 text-sm lg:hidden'> {data?.results[trendingMovieID]?.overview.slice(0,100)}.... <span className='hover:cursor-pointer'>Read more</span>  </p>
 
             <div className='hidden lg:inline-block'>
-                <p className='text-gray-300 text-md lg:pr-60 lg:py-4'> {data?.results[trendingMovieID]?.overview}.... <span className='hover:cursor-pointer'>Read more</span>  </p>
+                <p className='text-gray-300 text-md font-medium lg:pr-60 lg:py-4'> {data?.results[trendingMovieID]?.overview}.... <span className='hover:cursor-pointer'>Read more</span>  </p>
             </div>
 
         </Link>
         
+            {/* <button className='bg-fuchsia-400 p-4' onClick={() => console.log(data)}> LOG data FROM TREDNING BANNER  </button> */}
 
     </div>
   )

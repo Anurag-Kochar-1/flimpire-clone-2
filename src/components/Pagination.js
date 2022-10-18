@@ -5,7 +5,7 @@ import { nextPage , prevPage } from "../Redux/Slices/PageNumberSlice"
 
 function Pagination( {currentPage , setPageNumber , totalNumberOfPages} ) {
 
-    console.log(totalNumberOfPages);
+    // console.log(totalNumberOfPages);
 
     const pageNumberByRedux = useSelector((state) => state.pageNumberSlice.value)
     const dispatch = useDispatch();
