@@ -1,14 +1,23 @@
-import React  from 'react'
+import React, {useState, useEffect}  from 'react'
 import { useGetMoviesQuery } from "../../../Redux/Services/TMDB"
 import MovieList from './MovieList'
 import { useParams } from 'react-router'
+import Pagination from '../../Pagination'
+
 
 
 
 function Movies() {
+
+  
+    const [pageNumber, setPageNumber] = useState(1)
+
     const {category} = useParams()
-    const {data , error , isFetching} = useGetMoviesQuery(category)
-    // console.log(data);
+    const {data , error , isFetching} = useGetMoviesQuery({category , pageNumber})
+    
+    useEffect(() => {
+
+    },[pageNumber])
     
         
   return (
@@ -18,6 +27,7 @@ function Movies() {
         { isFetching &&  <h1 className='font-bold text-4xl' > FETCHING........ </h1>}
 
         <MovieList movies = {data} />
+        <Pagination currentPage={pageNumber} setPageNumber={setPageNumber} totalNumberOfPages={data?.total_pages} />
     </div>
   )
 }

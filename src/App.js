@@ -7,6 +7,7 @@ import SearchFeed from './pages/SearchFeed';
 import MoviesByGenre from './pages/MoviesByGenre';
 import SideBar from './components/Sidebar/SideBar';
 import { Routes , Route , Link } from "react-router-dom"
+import Pagination from './components/Pagination';
 
 
 function App() {
@@ -35,7 +36,10 @@ function App() {
                     <Route path='/search/:moviequery' exact element={<SearchFeed />} />
                     <Route path='/movies/:genreid' exact element={<MoviesByGenre />} />
                   </Routes>
+              {/* <Pagination /> */}
               </div>
+
+
 
             </div>
     

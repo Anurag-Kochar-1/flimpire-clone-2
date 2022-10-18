@@ -15,7 +15,7 @@ function SideBarCategories() {
 
       {Categories.map((category) => {
         return (
-          <Link to={`home/${category.name}`}>
+          <Link to={`home/${category.name}`} >
             <div className='text-[#ACACAC] flex flex-row justify-start items-center' key={category.id} >
             
 
