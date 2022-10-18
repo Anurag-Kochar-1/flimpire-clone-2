@@ -55,7 +55,13 @@ export const tmdbApi = createApi({
                 // return `discover/movie?with_genres=${genre}?page=1&api_key=${tmdbApiKey}` 
                 return `/discover/movie?page=${pageNumberByRedux}&sort_by=popularity.desc&api_key=${tmdbApiKey}&with_genres=${genreIDState}` 
             }
-         })
+         }),
+
+        getMovieVideos : builder.query ({
+            query : (id) => {
+                return `/movie/${id}/videos?api_key=${tmdbApiKey}&official=true`
+            }
+        })
 
 
     })
@@ -67,6 +73,7 @@ export const { useGetMoviesQuery ,
     useGetMovieCreditsQuery ,
     useGetMovieRecommendationsForMovieQuery,
     useGetSearchMovieQuery,
-    useGetMoviesByGenreQuery
+    useGetMoviesByGenreQuery,
+    useGetMovieVideosQuery
 
 } = tmdbApi

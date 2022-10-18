@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link , useParams } from "react-router-dom"
-import { useGetMovieDetailsQuery  } from "../Redux/Services/TMDB"
+import { useGetMovieDetailsQuery } from "../Redux/Services/TMDB"
+
 
 import MoviePoster from '../components/MovieDetailsPage/MoviePoster'; 
 import MovieTitle from '../components/MovieDetailsPage/MovieTitle';
@@ -8,6 +9,7 @@ import MovieTagline from '../components/MovieDetailsPage/MovieTagline';
 import MovieGenre from '../components/MovieDetailsPage/MovieGenre';
 import MovieOverview from '../components/MovieDetailsPage/MovieOverview';
 import MovieCast from '../components/MovieDetailsPage/MovieCast';
+import MovieVideoSection from '../components/MovieDetailsPage/MovieVideoSection';
 
 import MovieRecommendationsForMovie from '../components/MovieRecommendationsForMovie';
 
@@ -16,6 +18,8 @@ function MovieDetailPage() {
 
   const { id } = useParams();
   const {data} = useGetMovieDetailsQuery(id)
+  console.log(data);
+  console.log('loggin data from MovieDetailsPage.js');
 
 
   return (
@@ -24,7 +28,7 @@ function MovieDetailPage() {
      lg:flex lg:flex-col lg:justify-center lg:items-start  lg:px-0
     '>
     
-              <div className=' lg:flex lg:flex-row lg:justify-center lg:items-start  lg:px-0 '>
+          <div className=' lg:flex lg:flex-row lg:justify-center lg:items-start  lg:px-0 '>
 
                 <div className='w-screen px-2 py-10 flex flex-row justify-center items-center
                 lg:w-[30%] lg:h-auto lg:flex-col lg:justify-start lg:items-center 
@@ -40,8 +44,14 @@ function MovieDetailPage() {
                       <MovieGenre data={data}/>
                       <MovieOverview data={data}/>
                       {/* <MovieCast id={id}/> */}
+                      <MovieVideoSection id={data?.id} />
+                      
                 </div>
-              </div>
+          </div>
+
+
+          {/* <div className=' w-[100%] h-auto py-5 bg-yellow-100 flex flex-row justify-center items-start'>
+          </div> */}
          
           <div className=' w-[100%] h-auto flex flex-row justify-center  py-5'>
             <MovieCast id={id}/>

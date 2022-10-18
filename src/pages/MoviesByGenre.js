@@ -46,8 +46,8 @@ function MoviesByGenre() {
     
 
     const {data ,error} = useGetMoviesByGenreQuery({genreIDState, pageNumberByRedux})
-    console.log(data)
-    console.log('data is printed');
+    // console.log(data)
+    // console.log('data is printed');
 
     
 
