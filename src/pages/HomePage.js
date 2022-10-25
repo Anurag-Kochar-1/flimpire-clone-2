@@ -2,6 +2,7 @@ import React , {useEffect}  from 'react'
 import "../utils/utils.css"
 import TrendingBanner from '../components/HomPage/TrendingBanner'
 import Movies from '../components/HomPage/Movies/Movies'
+import TrendingBannerCarousel from "../components/TrendingBanner/TrendingBannerCarousel"
 
 function HomePage() {
 
@@ -17,7 +18,8 @@ function HomePage() {
 
         {/* <Link to={'/movie/123'} className='bg-gray-800 text-white'> Go to Movie detail page </Link> */}
 
-        <TrendingBanner />
+        {/* <TrendingBanner /> */}
+        <TrendingBannerCarousel />
         <Movies />
 
 

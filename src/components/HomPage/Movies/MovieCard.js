@@ -7,8 +7,8 @@ import { Rating } from "@mui/material"
 
 function MovieCard( {movie} ) {
   const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
-  console.log('loggin movie from movie card');
-  console.log(movie);
+  // console.log('loggin movie from movie card');
+  // console.log(movie);
   return (
 
     <div className='bg-[#1F1F1F] w-[55%] h-auto mx-2 my-5 pb-3 rounded-md flex flex-col justify-center items-center hover:scale-110 transition duration-300 ease-in-out

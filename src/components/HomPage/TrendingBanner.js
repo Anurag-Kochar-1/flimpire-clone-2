@@ -8,9 +8,11 @@ import { useGetTrendingMoviesQuery } from "../../Redux/Services/TMDB"
 function TrendingBanner() {
     const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
 
-    console.log('TrendingBanner is CALLED');
+    // console.log('TrendingBanner is CALLED');
+
     const randomID = Math.floor(Math.random() * (18 - 1)) + 1;
     const {data} = useGetTrendingMoviesQuery(movieORtv)
+    // console.log(data);
 
     const [ trendingMovieID, setTrendingMovieID ] = useState(0)
     
@@ -35,7 +37,7 @@ function TrendingBanner() {
         sm:h-[40vh]
         md:h-[40vh] 
         lg:w-[99%]  lg:h-[50vh] 
-        xl:h-[45vh]
+        xl:h-[55vh]
         hover:cursor-pointer
     '>
 
