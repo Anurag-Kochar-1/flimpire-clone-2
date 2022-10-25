@@ -21,7 +21,7 @@ function TrendinBannerCard({trendingData}) {
         backgroundSize: "cover",
         backgroundBlendMode: "multiply"
         }}
-      className='bg-gray-700 w-full py-2 px-3 h-auto rounded-md flex flex-col items-center justify-start
+      className='bg-gray-700 w-full h-auto py-2 px-3  rounded-md flex flex-col items-center justify-start
           sm:h-[40vh]
           md:h-[40vh] 
           lg:w-[99%]  lg:h-[50vh] lg:flex-row lg:px-8
@@ -30,7 +30,10 @@ function TrendinBannerCard({trendingData}) {
       '>
 
       <div >
-        <h2 className='text-white font-bold text-4xl'> {trendingData?.title} </h2>
+
+        {movieORtv === 'movie' && <h2 className='text-white font-bold text-4xl pb-1'> {trendingData?.title} </h2>}
+        {movieORtv === 'tv' && <h2 className='text-white font-bold text-4xl pb-1'> {trendingData?.name} </h2>}
+
         <p className='text-white font-medium text-base py-2 lg:hidden'> {trendingData?.overview?.slice(0,200)}.... </p>
 
         <p className='hidden lg:text-white lg:font-medium lg:text-lg lg:py-4 lg:inline'> {trendingData?.overview} </p>
@@ -46,19 +49,20 @@ function TrendinBannerCard({trendingData}) {
 
       </div>
 
-      <div className='px-5'>
+      
 
         <img
-        className='hidden shadow-sm shadow-gray-500
-        lg:inline-block lg:rounded-lg lg:my-2 
-        xl:my-2
-        2xl:my-2
+        className=' hidden
+        lg:flex lg:w-[30%] lg:my-2 lg:mx-2 lg:shadow-sm lg:shadow-gray-500 lg:rounded-lg
+        xl:flex xl:w-[20%] xl:my-2 xl:mx-2 xl:shadow-sm xl:shadow-gray-500 xl:rounded-lg
+        2xl:flex 2xl:w-[20%] 2xl:my-2 2xl:mx-4 2xl:shadow-sm 2xl:shadow-gray-500 2xl:rounded-xl  
+
         
         
         '
         src={`https://image.tmdb.org/t/p/w500${trendingData?.poster_path}`} alt={trendingData?.title} />
 
-      </div>
+     
 
 
       </div>
