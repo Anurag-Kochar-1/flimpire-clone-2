@@ -10,7 +10,7 @@ function TrendinBannerCard({trendingData}) {
 
   const { data : videoData } = useGetMovieVideosQuery({ id, movieORtv })
 
-  console.log(videoData);
+  // console.log(trendingData);
   
   return (
     <Link to={`movie/${trendingData?.id}`}>
@@ -21,22 +21,25 @@ function TrendinBannerCard({trendingData}) {
         backgroundSize: "cover",
         backgroundBlendMode: "multiply"
         }}
-      className='bg-gray-700 w-full h-auto py-2 px-3  rounded-md flex flex-col items-center justify-start
+      className='bg-gray-700 w-full h-auto py-2 px-3 lg:py-4  rounded-md flex flex-col items-center justify-start
           sm:h-[40vh]
           md:h-[40vh] 
-          lg:w-[99%]  lg:h-[50vh] lg:flex-row lg:px-8
-          xl:h-[55vh]
+          lg:w-[99%]  lg:h-[50vh] lg:flex-row 
+          xl:h-[55vh] xl:px-32
+          2xl:h-[55vh] 2xl:px-32
           hover:cursor-pointer
       '>
 
       <div >
 
-        {movieORtv === 'movie' && <h2 className='text-white font-bold text-4xl pb-1'> {trendingData?.title} </h2>}
-        {movieORtv === 'tv' && <h2 className='text-white font-bold text-4xl pb-1'> {trendingData?.name} </h2>}
+        {movieORtv === 'movie' && <h2 className='text-white font-bold text-4xl lg:text-5xl '> {trendingData?.title} </h2>}
 
-        <p className='text-white font-medium text-base py-2 lg:hidden'> {trendingData?.overview?.slice(0,200)}.... </p>
+        {movieORtv === 'tv' && <h2 className='text-white font-bold text-4xl lg:text-5xl '> {trendingData?.name} </h2>}
 
-        <p className='hidden lg:text-white lg:font-medium lg:text-lg lg:py-4 lg:inline'> {trendingData?.overview} </p>
+
+        <p className='text-gray-50 font-normal text-base py-2 lg:hidden'> {trendingData?.overview?.slice(0,200)}.... </p>
+
+        <p className='hidden lg:text-gray-50 lg:font-normal lg:text-lg lg:py-4 lg:inline'> {trendingData?.overview} </p>
 
         {/* <p className='text-white font-medium text-base py-2'> Apart from counting words and characters, our online editor can help you to improve word choice and writing style, and, optionally, help you to det... </p> */}
         
@@ -54,8 +57,8 @@ function TrendinBannerCard({trendingData}) {
         <img
         className=' hidden
         lg:flex lg:w-[30%] lg:my-2 lg:mx-2 lg:shadow-sm lg:shadow-gray-500 lg:rounded-lg
-        xl:flex xl:w-[20%] xl:my-2 xl:mx-2 xl:shadow-sm xl:shadow-gray-500 xl:rounded-lg
-        2xl:flex 2xl:w-[20%] 2xl:my-2 2xl:mx-4 2xl:shadow-sm 2xl:shadow-gray-500 2xl:rounded-xl  
+        xl:flex xl:w-[20%] xl:my-2 xl:mx-5 xl:shadow-sm xl:shadow-gray-500 xl:rounded-lg
+        2xl:flex 2xl:w-[20%] 2xl:my-2 2xl:mx-5 2xl:shadow-sm 2xl:shadow-gray-500 2xl:rounded-xl  
 
         
         
