@@ -3,6 +3,7 @@ import "../utils/utils.css"
 import TrendingBanner from '../components/HomPage/TrendingBanner'
 import Movies from '../components/HomPage/Movies/Movies'
 import TrendingBannerCarousel from "../components/TrendingBanner/TrendingBannerCarousel"
+import Footer from '../components/Footer'
 
 function HomePage() {
 
@@ -16,11 +17,14 @@ function HomePage() {
     '>
         
 
+
         {/* <Link to={'/movie/123'} className='bg-gray-800 text-white'> Go to Movie detail page </Link> */}
 
         {/* <TrendingBanner /> */}
         <TrendingBannerCarousel />
         <Movies />
+
+        {/* <Footer /> */}
 
 
         </div>
