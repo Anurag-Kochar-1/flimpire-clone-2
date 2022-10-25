@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Categories } from "../../utils/Constants"
+import {Categories } from "../../utils/constants"
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setPageNumberByRedux } from "../../Redux/Slices/PageNumberSlice"
