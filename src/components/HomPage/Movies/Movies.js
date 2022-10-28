@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux'
 
 function Movies() {
 
-  console.log('Movies.js is CALLED');
+  // console.log('Movies.js is CALLED');
 
     const pageNumberByRedux = useSelector((state) => state.pageNumberSlice.value)
     const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)

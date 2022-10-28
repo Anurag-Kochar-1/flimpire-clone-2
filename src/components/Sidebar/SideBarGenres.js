@@ -1,5 +1,5 @@
 import React from 'react'
-import {genres , TvGenres } from "../../utils/Constants"
+import {genres , TvGenres } from "../../utils/constants"
 import { Link , useParams} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPageNumberByRedux } from "../../Redux/Slices/PageNumberSlice"

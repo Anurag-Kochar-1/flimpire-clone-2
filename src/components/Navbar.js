@@ -16,7 +16,6 @@ function Navbar() {
     
     '>
 
-        {/* <BsSun className='text-white hover:cursor-pointer' /> */}
         <DropdownMenu />
         
         <SearchBar />

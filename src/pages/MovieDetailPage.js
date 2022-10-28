@@ -10,6 +10,7 @@ import MovieGenre from '../components/MovieDetailsPage/MovieGenre';
 import MovieOverview from '../components/MovieDetailsPage/MovieOverview';
 import MovieCast from '../components/MovieDetailsPage/MovieCast';
 import MovieVideoSection from '../components/MovieDetailsPage/MovieVideoSection';
+import Modal from '../components/Modal';
 
 import MovieRecommendationsForMovie from '../components/MovieRecommendationsForMovie';
 import { useSelector } from 'react-redux';
@@ -55,7 +56,7 @@ function MovieDetailPage() {
                       <MovieOverview data={data}/>
                       {/* <MovieCast id={id}/> */}
                       <MovieVideoSection id={data?.id} />
-
+                      <Modal modalData={data} />
                      
                       
                 </div>
