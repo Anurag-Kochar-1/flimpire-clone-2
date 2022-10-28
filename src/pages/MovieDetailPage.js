@@ -56,7 +56,7 @@ function MovieDetailPage() {
                       <MovieOverview data={data}/>
                       {/* <MovieCast id={id}/> */}
                       <MovieVideoSection id={data?.id} />
-                      <Modal modalData={data} />
+                      {/* <Modal modalData={data} /> */}
                      
                       
                 </div>
