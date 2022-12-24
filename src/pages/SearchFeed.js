@@ -15,7 +15,7 @@ function SearchFeed() {
 
 
 
-  if(!data) return <div className='w-full lg:w-3/4 lg:ml-[25%] xl:w-[80%] xl:ml-[20%]  h-screen bg-transparent flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>
+  if(!data) return <div className='w-full h-screen bg-black flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>
   
   return (
     <div className='

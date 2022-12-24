@@ -1,15 +1,13 @@
-import React, { lazy, Suspense } from 'react'
 import "../../utils/utils.css"
 import "../../App.css"
 import SidebarLogoBranding from './SidebarLogoBranding'
 import SideBarCategories from './SideBarCategories'
-import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import SideBarGenres from './SideBarGenres'
 
 
 
 function SideBar() {
-  
+  console.log(`------------ SideBar ------------ `)
   
 
   return (
@@ -21,7 +19,6 @@ function SideBar() {
       <SidebarLogoBranding />
       <SideBarCategories />
       <SideBarGenres />
-      {/* <button className='bg-white p-5' onClick={() => console.log(data)} > LOG CONTEXT DATA </button> */}
 
     
     </div>

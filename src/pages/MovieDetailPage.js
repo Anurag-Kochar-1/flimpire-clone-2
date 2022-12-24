@@ -22,12 +22,12 @@ function MovieDetailPage() {
   const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
 
   const { id } = useParams();
-  const { data } = useGetMovieDetailsQuery({ id, movieORtv })
+  const { data , isFetching } = useGetMovieDetailsQuery({ id, movieORtv })
   console.log(data);
   console.log('loggin data from MovieDetailsPage.js');
 
 
-  if(!data) return <div className='w-screen h-screen bg-black flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>
+  if(isFetching) return <div className='fixed inset-0 z-50 w-screen h-[100vh] bg-black flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>
   
   return (
     <div className='w-[100%] min-h-full flex flex-col justify-center items-center px-2 pt-[11vh] lg:flex lg:flex-col lg:justify-center lg:items-start  lg:px-0'>
