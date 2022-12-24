@@ -1,9 +1,10 @@
+import React , {useEffect, useState, memo} from 'react'
 import AliceCarousel from "react-alice-carousel"
-import React , {useEffect, useState} from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 import { useGetTrendingMoviesQuery } from "../../Redux/Services/TMDB"
 import TrendinBannerCard from "./TrendingBannerCard";
+
 
 
 function TrendingBanner() {
@@ -21,12 +22,9 @@ function TrendingBanner() {
     
     useEffect(() => {
         setTrendingMovieID(randomID)
-        // console.log(`random id is : ${randomID}`);
     },[])
     
     
-    // console.log(`LOGGIN DATA FROM TRENDINGBANNERCAROUSEL`);
-    // console.log(data?.results?.slice(0,6));
     
     const responsive = {
         0: {
@@ -37,11 +35,12 @@ function TrendingBanner() {
         },
       };
 
-      const items = data?.results?.slice(0,6).map((trendingMovieORtv) => {
-        return <TrendinBannerCard trendingData={trendingMovieORtv} />
-      } )
 
-    
+
+    const items = data?.results?.slice(0,6).map((trendingMovieORtv) => {
+      return <TrendinBannerCard trendingData={trendingMovieORtv} />
+    })
+
 
   return (
     <div 
@@ -69,7 +68,6 @@ function TrendingBanner() {
 
         
         
-        {/* <button className='bg-fuchsia-400 p-4' onClick={() => console.log(data)}> LOG data FROM TREDNING BANNER  </button> */}
 
     </div>
   )

@@ -11,10 +11,10 @@ import { Routes, Route } from "react-router-dom"
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 // Codde Splitting
+const HomePage = lazy(() => import('./pages/HomePage'))
 const SearchFeed = lazy(() => import('./pages/SearchFeed'))
 const MovieDetailPage = lazy(() => import('./pages/MovieDetailPage'))
 const MoviesByGenre = lazy(() => import('./pages/MoviesByGenre'))
-const HomePage = lazy(() => import('./pages/HomePage'))
 
 
 function App() {

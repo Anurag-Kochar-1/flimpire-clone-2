@@ -62,7 +62,8 @@ function MovieCard( {movie} ) {
               <img 
               src={``} 
               data-src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} 
-              alt={movie.title} className={isImageLoaded ? "rounded-md transition-all duration-500 ease-linear filter" : "blur-lg rounded-md"}  
+              alt={movie.title} 
+              className={isImageLoaded ? "w-full rounded-md transition-all duration-500 ease-linear filter" : "w-full blur-lg rounded-md"}  
               onLoad={() => setIsImageLoaded(true)}
               />
             )}
