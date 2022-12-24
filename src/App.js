@@ -35,7 +35,7 @@ function App() {
 
         <Navbar />
 
-          <Suspense fallback={<div className='w-screen h-screen bg-black flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>}>
+          <Suspense fallback={<div className='fixed inset-0 z-50 w-screen h-[100vh] bg-black flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>}>
             <Routes>
                 <Route path='/' exact element={<HomePage />} />
                 <Route path='/home/:category' exact element={<HomePage />} />
