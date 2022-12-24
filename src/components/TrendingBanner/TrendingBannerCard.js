@@ -9,7 +9,7 @@ const optionsConfig = {
 }
 
 function TrendinBannerCard({trendingData}) {
-  console.log(`------------ trending Card ------------ `)
+  // console.log(`------------ trending Card ------------ `)
   const [isImageLoaded, setIsImageLoaded] = useState(false)
   let id = trendingData?.id
 
