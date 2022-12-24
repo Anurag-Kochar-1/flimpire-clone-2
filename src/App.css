@@ -36,6 +36,7 @@ html, body {
   overflow-y: scroll;
   padding: 3rem 1rem;
   padding-bottom: 10rem;
+  transition: all 300ms ease-in-out;
 
   display: flex;
   flex-direction: column;

@@ -14,7 +14,7 @@ import Modal from '../components/Modal';
 
 import MovieRecommendationsForMovie from '../components/MovieRecommendationsForMovie';
 import { useSelector } from 'react-redux';
-import {AiOutlineLoading3Quarters} from "react-icons/ai"
+import { AiOutlineLoading3Quarters } from "react-icons/ai"
 
 
 
@@ -22,13 +22,13 @@ function MovieDetailPage() {
   const movieORtv = useSelector((state) => state.ToggleTypeSlice.value)
 
   const { id } = useParams();
-  const { data , isFetching } = useGetMovieDetailsQuery({ id, movieORtv })
+  const { data, isFetching } = useGetMovieDetailsQuery({ id, movieORtv })
   console.log(data);
   console.log('loggin data from MovieDetailsPage.js');
 
 
-  if(isFetching) return <div className='fixed inset-0 z-50 w-screen h-[100vh] bg-black flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>
-  
+  if (isFetching) return <div className='fixed inset-0 z-50 w-screen h-[100vh] bg-black flex justify-center items-center'> <AiOutlineLoading3Quarters className='animate-spin w-10 h-10 text-white' /> </div>
+
   return (
     <div className='w-[100%] min-h-full flex flex-col justify-center items-center px-2 pt-[11vh] lg:flex lg:flex-col lg:justify-center lg:items-start  lg:px-0'>
 
@@ -40,9 +40,8 @@ function MovieDetailPage() {
           <MoviePoster data={data} />
         </div>
 
-        <div className=' w-screen h-auto py-3 text-center flex flex-col justify-center items-center
-                lg:w-[80%] lg:h-auto lg:flex-col lg:items-center lg:justify-center 
-                '>
+        <div className='w-screen h-auto py-3 text-center flex flex-col justify-center items-center lg:w-[80%] lg:h-auto lg:flex-col lg:items-center lg:justify-center '>
+
           <MovieTitle data={data} />
           <MovieTagline data={data} />
 
@@ -51,6 +50,7 @@ function MovieDetailPage() {
           </div>
 
           <MovieGenre data={data} />
+
           <MovieOverview data={data} />
           {/* <MovieCast id={id}/> */}
           <MovieVideoSection id={data?.id} />
